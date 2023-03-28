@@ -3,7 +3,7 @@ namespace App\Tablas;
 
 use PDO;
 
-class Usuario extends Modelo
+class Usuario
 {
     protected static string $tabla = 'usuarios';
 

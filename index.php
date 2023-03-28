@@ -1,4 +1,6 @@
-<?php session_start();
+<?php
+    use App\Tablas\Usuario;
+    session_start();
     require 'conexion.php';
 ?>
 <!DOCTYPE html>
@@ -11,7 +13,8 @@
 </head>
 <body>
     <?php
-    if(!esta_logueado()){
+    echo Usuario::esta_logueado();
+    if(!$log){
         header('Location: /login.php');
         exit();
     }
